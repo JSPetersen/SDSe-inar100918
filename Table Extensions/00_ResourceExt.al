@@ -9,14 +9,14 @@ tableextension 123456701 "CSD ResourceExt" extends Resource
                 rec.TestField("Unit Cost")
             end;
         }
-        field(123456702; "CDS Resource Type"; Option)
+        field(123456701; "CDS Resource Type"; Option)
         {
             OptionMembers = "Internal", "External";
             OptionCaption = 'Internal,External';
             Caption = 'Internal,External';
 
         }
-        field(123456701; "CDS Maximum Participant"; Integer)
+        field(123456702; "CDS Maximum Participant"; Integer)
         {
             Caption = 'CDS Maximum Participants';
 
