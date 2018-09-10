@@ -15,20 +15,16 @@ pageextension 123456700 "CSD Resource CardExt" extends "Resource Card"
 
 
             }
-            field("CDS Maximum Participant";"CDS Maximum Participant")
-            {
-
-            }
         }
-        
+
         addafter("Personal Data")
         {
             group("CDS Room")
             {
                 Visible = ShowMaxField;
-                field("CDS Maximum Participant";"CDS Maximum Participant","CDS Maximum Participant")
+                field("CDS Maximum Participant"; "CDS Maximum Participant")
                 {
-                    
+
                 }
                 
             }
@@ -42,12 +38,13 @@ pageextension 123456700 "CSD Resource CardExt" extends "Resource Card"
     }
 trigger OnAfterGetRecord();
 begin
-    ShowMaxField := (Type = Type::Machine); CurrPage.Update(false);
+    ShowMaxField := (Type = Type::Machine);
+    CurrPage.Update(false);
     
 end;
     var
     [InDataSet]
-    ShoxMaxField:Boolean;
+    ShowMaxField:Boolean;
     
       
 }
